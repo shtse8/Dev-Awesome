@@ -10,7 +10,7 @@ tar -xf google-cloud-cli-465.0.0-linux-x86_64.tar.gz
 ./google-cloud-sdk/bin/gcloud auth login
 ```
 
-2. (Github CLI)[https://cli.github.com/]
+2. [Github CLI](https://cli.github.com/)
 ```
 apt install gh
 gh auth login
