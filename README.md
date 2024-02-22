@@ -1,4 +1,4 @@
-# cheatsheet
+# Dev-Awesome
 
 ## Categories
 - [CLI](./CLI/README.md)
