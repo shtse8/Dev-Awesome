@@ -23,7 +23,6 @@ jobs:
       - name: Commit changes
         continue-on-error: true
         run: |
-          cd ${{github.workspace}}
           git config --global user.email "shtse8@gmail.com"
           git config --global user.name "shtse8"
           git add .
