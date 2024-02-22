@@ -20,12 +20,10 @@ jobs:
         uses: DaanV2/Markdown-Action-Create-Indexes@v2.0.0
 
         
-      - name: Commit changes
-        continue-on-error: true
-        run: |
-          git config --global user.email "shtse8@gmail.com"
-          git config --global user.name "shtse8"
-          git add .
-          git commit -m "auto: Generated markdown indexes"
-          git push
-        
+      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        with:
+          message: "Auto-generate Markdown"
+          add: "README.md"
+          signoff: true
+          push: true
+          force: true
