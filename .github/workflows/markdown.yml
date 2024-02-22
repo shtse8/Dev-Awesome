@@ -1,10 +1,6 @@
 name: Auto-generate Markdown
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
   workflow_call:
   workflow_dispatch:
 
@@ -16,5 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # Runs a single command using the runners shell
       - name: Generated Markdown Readmes
         uses: DaanV2/Markdown-Action-Create-Indexes@v2.0.0
+
+        
+      - name: Commit changes
+        continue-on-error: true
+        run: |
+          cd ${{github.workspace}}
+          git config --global user.email "shtse8@gmail.com"
+          git config --global user.name "shtse8"
+          git add .
+          git commit -m "auto: Generated markdown indexes"
+          git push
+        
