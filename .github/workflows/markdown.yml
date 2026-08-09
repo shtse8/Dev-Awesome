@@ -23,7 +23,7 @@ jobs:
         with:
           filename: README.md
         
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@v11
         with:
           message: "Auto-generate Markdown"
           signoff: true
